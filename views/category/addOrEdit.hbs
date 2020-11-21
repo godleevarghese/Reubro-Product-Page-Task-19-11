@@ -1,0 +1,22 @@
+<h3>{{viewTitle}}</h3>
+
+<form action="/category" method="POST" autocomplete="off">
+    <input type="hidden" name="_id" value="{{category._id}}">
+    <div class="form-group">
+        <label>Product Name</label>
+        <input type="text" class="form-control" name="productName" placeholder="Product Name" value="{{category.productName}}">
+        <div class="text-danger">
+            {{category.productNameError}}</div>
+    </div>
+    <div class="form-group">
+        <label>Category Code</label>
+        <input type="text" class="form-control" name="categoryCode" placeholder="Product Category Code" value="{{category.categoryCode}}">
+        <div class="text-danger">
+            {{category.categoryError}}</div>
+    </div>
+  
+    <div class="form-group">
+        <button type="submit" class="btn btn-info"><i class="fa fa-database"></i> Add Category</button>
+        <a class="btn btn-secondary" href="/category/list"><i class="fa fa-list-alt"></i> View All Categories</a>
+    </div>
+</form>

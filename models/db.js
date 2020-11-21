@@ -6,3 +6,4 @@ mongoose.connect('mongodb://localhost:27017/productDB', { useNewUrlParser: true 
 });
 
 require('./product.model');
+require( './category.model')

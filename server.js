@@ -6,6 +6,8 @@ const exphbs = require('express-handlebars');
 const bodyparser = require('body-parser');
 
 const productController = require('./controllers/productController');
+const categoryController = require('./controllers/categoryController');
+
 
 var app = express();
 app.use(bodyparser.urlencoded({
@@ -21,3 +23,4 @@ app.listen(3000, () => {
 });
 
 app.use('/product', productController);
+app.use('/category', categoryController);
